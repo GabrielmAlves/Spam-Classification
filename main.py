@@ -3,7 +3,10 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
-
+def process_text(file):
+    print(file)
+    ##dataframe = pd.read_csv(file)
+    
 
 def join_directory(path1, path2):
     
@@ -26,6 +29,7 @@ def main():
     try:
         file = find_file("spam.csv")
         print(f"File was found: {file}")
+        process_text(file)
     except FileNotFoundError as e:
         print(e)
 
