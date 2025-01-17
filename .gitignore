@@ -1,0 +1,87 @@
+# Arquivos e diretórios comuns do Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Configurações de ambientes virtuais
+env/
+venv/
+.venv/
+ENV/
+.virtualenv/
+*.virtualenv
+
+# Arquivos do Jupyter Notebook
+.ipynb_checkpoints/
+
+# Arquivos temporários
+*.tmp
+*.log
+*.out
+*.err
+*.swp
+*.swo
+*.DS_Store
+*.~undo-tree~
+*.~undo~
+*~
+
+# Arquivos de sistema do macOS
+.DS_Store
+*.AppleDouble
+.LSOverride
+
+# Arquivos de sistema do Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Arquivos relacionados ao VS Code
+.vscode/
+*.code-workspace
+
+# Dependências específicas de pacotes
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Configurações de IDEs
+.idea/
+*.iml
+
+# Arquivos de cache do Pandas e outros
+*.parquet
+*.feather
+*.hdf5
+*.csv.gz
+
+# Dados sensíveis ou gerados automaticamente
+*.env
+*.key
+*.pem
+.secret
+*.sqlite3
+
+# Arquivos gerados por testes
+.coverage
+*.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.spec
+
+# Logs de execução
+logs/
+*.log
+
+# Resultados de treinamento de modelos (se aplicável)
+model/
+models/
+*.h5
+*.pkl
+*.joblib
+*.onnx
