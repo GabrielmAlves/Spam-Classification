@@ -7,6 +7,9 @@ from data_split import (
 from utils import (
     find_file,
 )
+from modeling import (
+    train_model,
+)
 
 
 def main():
@@ -15,13 +18,14 @@ def main():
         print(f"File was found: {file}")
         processed_file = process_text(file)
         X_train, X_val, X_test, y_train, y_val, y_test = sets_division(processed_file)
-        
-        print(f"\nX_train: {X_train}")
-        print(f"\n\nX_val: {X_val}")
-        print(f"\n\nX_test: {X_test}")
-        print(f"\n\ny_train: {y_train}")
-        print(f"\n\ny_val: {y_val}")
-        print(f"\n\ny_test: {y_test}")
+        teste = train_model(X_train, y_train, X_val, y_val)
+        print(f"teste: {teste}")
+        # print(f"\nX_train: {X_train}")
+        # print(f"\n\nX_val: {X_val}")
+        # print(f"\n\nX_test: {X_test}")
+        # print(f"\n\ny_train: {y_train}")
+        # print(f"\n\ny_val: {y_val}")
+        # print(f"\n\ny_test: {y_test}")
     except FileNotFoundError as e:
         print(e)
 
