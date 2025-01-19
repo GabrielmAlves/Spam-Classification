@@ -2,16 +2,21 @@ import os
 import chardet
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+from sklearn.feature_extraction.text import CountVectorizer
 from utils import (
     get_column
 )
+
+def vectorize(set, vectorizer, fit=False):
+    if fit:
+        return vectorizer.fit_transform(set)
+    else:
+        return vectorizer.transform(set)
 
 def encode(labels):
     label_encoder = LabelEncoder()
     
     encoded_values = label_encoder.fit_transform(labels)
-    print(f"Original values: '{labels}'")
-    print(f"Encoded values: '{encoded_values}'")
     return encoded_values
 
 def process_text(file):
