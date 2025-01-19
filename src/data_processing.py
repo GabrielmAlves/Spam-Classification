@@ -3,7 +3,7 @@ import chardet
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
-from utils import (
+from src.utils import (
     get_column
 )
 
