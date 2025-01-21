@@ -24,6 +24,9 @@ def process_text(file):
         detection = chardet.detect(f.read())
         encoding = detection['encoding']
     
+    if pd.read_csv(file, encoding=encoding).empty:
+        return pd.DataFrame()
+    
     dataframe = pd.read_csv(file, encoding=encoding)
     
     labels = get_column(dataframe, 'v1')

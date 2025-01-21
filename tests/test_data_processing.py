@@ -10,8 +10,25 @@ from src.utils import (
     find_file,
     join_directory
 )
+import tempfile
 
 class UnitTestDataProcessing(unittest.TestCase):
+    
+    
+    
+    
+    def test_process_text_empty_file(self):
+        with tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".csv") as temporary_file:
+            temporary_file.write("v1\n")
+            temporary_file.seek(0)
+            dataframe = process_text(temporary_file.name)
+                        
+        assert dataframe.empty
+        
+        if dataframe.empty:
+            print("\nIt appears to be an empty file..")
+        else:
+            print("\nWow! That file is not empty!")     
     
     def test_find_file_exists(self):
         test_file = "spam.csv"
